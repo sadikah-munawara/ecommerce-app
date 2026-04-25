@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductCard Snapshot > matches snapshot 1`] = `
+<div>
+  <div
+    class="product-card"
+  >
+    <button
+      class="wishlist-btn"
+    >
+      🤍
+    </button>
+    <img
+      alt="Test Product"
+      src="test.jpg"
+    />
+    <a
+      class="product-title"
+      data-discover="true"
+      href="/product/1"
+    >
+      <h3>
+        Test Product
+      </h3>
+    </a>
+    <p
+      class="price"
+    >
+      ₹ 
+      999
+    </p>
+    <button
+      class="add-btn"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;

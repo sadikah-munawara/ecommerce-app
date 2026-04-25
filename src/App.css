@@ -1,0 +1,84 @@
+html, body, #root{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  
+}
+
+
+#root{
+  background: transparent !important;
+}
+
+/* MAIN CONTAINER */
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+
+  
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+}
+
+/* TITLE */
+.page-title{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* SEARCH */
+.search-box{
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+}
+
+.search-box input{
+  padding:12px;
+  width:300px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+/* GRID */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* PAGINATION */
+.pagination{
+  text-align:center;
+  margin-top:30px;
+}
+
+.pagination button{
+  margin:5px;
+  padding:8px 12px;
+  border:none;
+  border-radius:6px;
+  background:#ddd;
+  cursor:pointer;
+}
+
+.pagination button.active{
+  background:#6366f1;
+  color:white;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .search-box input{
+    width:100%;
+  }
+}
+#root{
+  background: transparent !important;
+}

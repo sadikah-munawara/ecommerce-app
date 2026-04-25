@@ -1,0 +1,168 @@
+/* ================= THEME VARIABLES ================= */
+
+/* 🌞 LIGHT MODE */
+:root {
+  --primary: #cbb4d4;
+  --secondary: #9f7aea;
+
+  --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --text: #f1f5f9;
+}
+
+/* 🌙 DARK MODE */
+[data-theme="dark"] {
+  --primary: #8b5cf6;
+  --secondary: #6366f1;
+
+  --bg-gradient: linear-gradient(270deg, #0f0c29, #1e1b4b, #020617);
+  --text: #cbd5f5;
+}
+
+
+/* ================= GLOBAL STYLES ================= */
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: moveBg 12s ease infinite;
+
+  color: var(--text);
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ================= BUTTON STYLES ================= */
+
+button {
+  background: var(--primary);
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+
+/* ================= INPUT STYLES ================= */
+
+input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+
+  color: var(--text);
+  font-size: 14px;
+
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:not([type="checkbox"]):focus {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 0 2px rgba(159,122,234,0.3);
+}
+
+input:not([type="checkbox"])::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* 📱 TABLET */
+@media (max-width: 1024px) {
+
+  div[style*="padding: 40px"] {
+    padding: 25px !important;
+  }
+
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce large paddings */
+  div[style*="padding: 40px"] {
+    padding: 20px !important;
+  }
+
+  /* Stack grids */
+  div[style*="gridTemplateColumns"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  /* Wrap flex layouts */
+  div[style*="display: flex"] {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Prevent overflow issues */
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}

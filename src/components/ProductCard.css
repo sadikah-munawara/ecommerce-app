@@ -1,0 +1,66 @@
+.product-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.product-title {
+  text-decoration: none;
+  color: #333;
+}
+
+.product-title h3 {
+  font-size: 15px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* PRICE */
+.price {
+  font-weight: bold;
+  color: #4f46e5;
+  margin: 8px 0;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #3730a3;
+}
+
+/* WISHLIST BUTTON */
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
