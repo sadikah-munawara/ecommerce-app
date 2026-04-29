@@ -82,3 +82,11 @@ body{
 #root{
   background: transparent !important;
 }
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.7;
+}
+* {
+  transition: all 0.15s ease;
+}
