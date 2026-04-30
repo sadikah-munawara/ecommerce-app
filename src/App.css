@@ -91,11 +91,16 @@ body{
   transition: all 0.15s ease;
 }
 .checkout-container {
-  padding: 30px;
+  padding: 30px !important;
 }
 
 .checkout-container input {
   width: 100%;
   margin-bottom: 15px;
+  padding: 12px;
   box-sizing: border-box;
+}
+.checkout-container form {
+  max-width: 600px;
+  margin: auto;
 }
