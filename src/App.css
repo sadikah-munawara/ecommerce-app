@@ -39,11 +39,19 @@ body{
   margin:20px 0;
 }
 
-.search-box input{
-  padding:12px;
-  width:300px;
-  border-radius:10px;
-  border:1px solid #ccc;
+.search-box input {
+  padding: 12px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+
+  color: black;             
+  background-color: white;   
+}
+[data-theme="dark"] .search-box input {
+  color: white;
+  background-color: #2a2a2a;
+  border: 1px solid #555;
 }
 
 /* GRID */
