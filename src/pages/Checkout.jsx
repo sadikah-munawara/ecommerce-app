@@ -87,12 +87,13 @@ setCart([]);
   };
 
   const inputStyle = {
-    width: "100%",
-    padding: "10px",
-    marginBottom: "15px",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-  };
+  width: "100%",
+  padding: "12px",
+  marginBottom: "15px",
+  borderRadius: "5px",
+  border: "1px solid #9f67a1",
+  boxSizing: "border-box" 
+};
 
   const buttonStyle = {
     padding: "10px 20px",
