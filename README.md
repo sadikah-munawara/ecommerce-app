@@ -6,7 +6,7 @@ A modern, responsive eCommerce web application built using **React + Vite**, fea
 
 ## 🚀 Live Demo
 
-🔗 Coming Soon (Deployment in progress)
+🔗 Demo link: https://drive.google.com/file/d/11zK187yY8BXHQ_uyG_CJMuwk6Q0_FkSM/view?usp=sharing
 
 ---
 
