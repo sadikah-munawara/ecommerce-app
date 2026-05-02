@@ -4,14 +4,14 @@ export async function fetchProducts() {
 
   try {
 
-    // ✅ Check cache first
+    //  Check cache first
     const cached = localStorage.getItem("products");
 
     if (cached) {
       return JSON.parse(cached);
     }
 
-    // ✅ Fetch from API (using .env)
+    //  Fetch from API (using .env)
     const response = await fetch(API_URL);
 
     if (!response.ok) {
@@ -20,7 +20,7 @@ export async function fetchProducts() {
 
     const data = await response.json();
 
-    // ✅ Save to localStorage
+    // Save to localStorage
     localStorage.setItem("products", JSON.stringify(data));
 
     return data;

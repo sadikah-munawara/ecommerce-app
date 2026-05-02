@@ -8,7 +8,7 @@ function Home() {
 
   const [darkMode, setDarkMode] = useState(false);
 
-  // Detect theme from HTML attribute
+  // Detect theme 
   useEffect(() => {
     const checkTheme = () => {
       const theme = document.documentElement.getAttribute("data-theme");
@@ -17,7 +17,6 @@ function Home() {
 
     checkTheme();
 
-    // optional: listen if theme changes dynamically
     const observer = new MutationObserver(checkTheme);
     observer.observe(document.documentElement, {
       attributes: true,
@@ -56,7 +55,6 @@ function Home() {
           justifyContent: "space-between",
           alignItems: "center",
 
-          // 🔥 USE THEME GRADIENT (instead of hardcoded)
           background: "var(--bg-gradient)",
           backgroundSize: "400% 400%",
           animation: "moveBg 12s ease infinite",
@@ -72,8 +70,6 @@ function Home() {
             width: "100px",
             height: "100px",
             borderRadius: "50%",
-
-            // 🔥 Reduced brightness in dark mode
             background: darkMode
               ? "rgba(255,255,255,0.03)"
               : "rgba(255,255,255,0.06)",
@@ -85,7 +81,7 @@ function Home() {
         {/* LEFT CONTENT */}
         <div
           style={{
-            color: darkMode ? "#cbd5f5" : "#f1f5f9", // 🔥 softer text in dark mode
+            color: darkMode ? "#cbd5f5" : "#f1f5f9", 
             maxWidth: "50%",
           }}
         >

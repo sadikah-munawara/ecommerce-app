@@ -83,7 +83,7 @@ function AdminDashboard() {
           flex: 1,
           padding: "40px",
 
-          // 🔥 Theme background
+          //  Theme background
           background: "var(--bg-gradient)",
           color: "var(--text)"
         }}
@@ -106,8 +106,6 @@ function AdminDashboard() {
             <div
               style={{
                 padding: "20px",
-
-                // 🔥 Glass effect (adapts to dark mode)
                 background: darkMode
                   ? "rgba(255,255,255,0.05)"
                   : "rgba(255,255,255,0.15)",

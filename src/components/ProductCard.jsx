@@ -4,10 +4,9 @@ import "./ProductCard.css";
 
 function ProductCard({ product, addToCart, wishlist, toggleWishlist }) {
 
-  // ✅ Remove null/invalid items safely
   const safeWishlist = wishlist.filter((item) => item && item.id);
 
-  // ✅ Check if current product is wishlisted
+  
   const isWishlisted = safeWishlist.some(
     (item) => item.id === product.id
   );
@@ -20,7 +19,7 @@ function ProductCard({ product, addToCart, wishlist, toggleWishlist }) {
         className="wishlist-btn"
         onClick={(e) => {
           e.stopPropagation();
-          toggleWishlist(product);   // ✅ pass full product
+          toggleWishlist(product);   
         }}
       >
         {isWishlisted ? "❤️" : "🤍"}
